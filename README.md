@@ -1,8 +1,8 @@
 # NJULogin_Mac
-A macOS app that helps you log on p.nju.edu.cn 
+A macOS app that helps you log on `p.nju.edu.cn`.
 
 # Info
-This app can help you log in and out 'p.nju.edu.cn' easier than ever on macOS.
+This app can help you log in and out `p.nju.edu.cn` easier than ever on macOS.
 
 # Usage
 1. Download the `.dmg` file (to be added), and drag `NJULogin` into `/Application`.
