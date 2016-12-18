@@ -54,6 +54,12 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
     
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [_statusItem setImage:[NSImage imageNamed:@"TEMP_STATUS_BAR.png"]];
+    [_statusItem setHighlightMode:YES];
+    [_statusItem setAction:@selector(onStatusItemClicked:)];
+    [_statusItem setTarget:self];
+    
     //先注册快捷键的事件回调
     EventTypeSpec eventSpecs[] = {{kEventClassKeyboard,kEventHotKeyPressed}};
     InstallApplicationEventHandler(NewEventHandlerUPP(myHotKeyHandler),
@@ -77,13 +83,10 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
                         GetApplicationEventTarget(),
                         0,
                         &b_HotKeyRef);
-    
-    
-    NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    [statusItem setImage:[NSImage imageNamed:@""]];
-    [statusItem setHighlightMode:YES];
-    [statusItem setAction:@selector(onStatusItemClicked:)];
-    [statusItem setTarget:self];
+}
+
+- (void)onStatusItemClicked:(id)sender{
+    NSLog(@"click");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification{
