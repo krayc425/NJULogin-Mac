@@ -348,6 +348,7 @@
 				DEVELOPMENT_TEAM = VEBQ28K9EA;
 				INFOPLIST_FILE = NJULoginMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = krayc.NJULoginMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -362,6 +363,7 @@
 				DEVELOPMENT_TEAM = VEBQ28K9EA;
 				INFOPLIST_FILE = NJULoginMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = krayc.NJULoginMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

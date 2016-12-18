@@ -22,7 +22,7 @@
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"username"] != NULL){
         [self.usernameText setStringValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"username"]];
     }else{
-        [self.usernameText setStringValue:@"Enter your username"];
+        [self.usernameText setPlaceholderString:@"Enter your username"];
     }
     
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"password"] != NULL){
