@@ -19,6 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"username"] != NULL){
+        [self.usernameText setStringValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"username"]];
+    }else{
+        [self.usernameText setStringValue:@"Enter your username"];
+    }
+    
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"password"] != NULL){
+        [self.passwordText setStringValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"password"]];
+    }else{
+        [self.passwordText setStringValue:@""];
+    }
+    
     [self checkStatus];
 }
 
@@ -92,6 +104,9 @@
               NSString *dateString = [dateFormatter stringFromDate:date];
               
               [self.logView setString:[self.logView.string stringByAppendingString:[NSString stringWithFormat:@"%@  %@\n", dateString, resultDict[@"reply_msg"]]]];
+              
+              [[NSUserDefaults standardUserDefaults] setValue:[NSString stringWithString:self.usernameText.stringValue] forKey:@"username"];
+              [[NSUserDefaults standardUserDefaults] setValue:[NSString stringWithString:self.passwordText.stringValue] forKey:@"password"];
               
           }
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

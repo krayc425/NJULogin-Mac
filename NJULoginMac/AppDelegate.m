@@ -42,7 +42,8 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
                           &keyID);
         if (keyID.id == a_HotKeyID.id) {
             NSLog(@"Key Login");
-            [LoginManager loginWithUserName:@"141210026" andPassword:@"songkuixi+xw7"];
+            [LoginManager loginWithUserName:[[NSUserDefaults standardUserDefaults] valueForKey:@"username"]
+                                andPassword:[[NSUserDefaults standardUserDefaults] valueForKey:@"password"]];
         }
         if (keyID.id == b_HotKeyID.id) {
             NSLog(@"Key Logout");

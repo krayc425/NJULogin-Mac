@@ -80,14 +80,14 @@
 			children = (
 				240E1C801E06A8CC006AE69A /* AppDelegate.h */,
 				240E1C811E06A8CC006AE69A /* AppDelegate.m */,
+				24D35FE71E06B1F30085696F /* LoginManager.h */,
+				24D35FE81E06B1F30085696F /* LoginManager.m */,
 				240E1C861E06A8CC006AE69A /* ViewController.h */,
 				240E1C871E06A8CC006AE69A /* ViewController.m */,
 				240E1C891E06A8CC006AE69A /* Assets.xcassets */,
 				240E1C8B1E06A8CC006AE69A /* Main.storyboard */,
 				240E1C8E1E06A8CC006AE69A /* Info.plist */,
 				240E1C831E06A8CC006AE69A /* Supporting Files */,
-				24D35FE71E06B1F30085696F /* LoginManager.h */,
-				24D35FE81E06B1F30085696F /* LoginManager.m */,
 			);
 			path = NJULoginMac;
 			sourceTree = "<group>";
