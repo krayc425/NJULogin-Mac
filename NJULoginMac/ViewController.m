@@ -142,4 +142,8 @@
     }
 }
 
+- (IBAction)quitAction:(id)sender{
+    [[NSApplication sharedApplication] terminate:nil];
+}
+
 @end
