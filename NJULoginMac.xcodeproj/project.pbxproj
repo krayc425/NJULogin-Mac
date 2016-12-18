@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240E1C821E06A8CC006AE69A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E1C811E06A8CC006AE69A /* AppDelegate.m */; };
+		240E1C851E06A8CC006AE69A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E1C841E06A8CC006AE69A /* main.m */; };
+		240E1C881E06A8CC006AE69A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E1C871E06A8CC006AE69A /* ViewController.m */; };
+		240E1C8A1E06A8CC006AE69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240E1C891E06A8CC006AE69A /* Assets.xcassets */; };
+		240E1C8D1E06A8CC006AE69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240E1C8B1E06A8CC006AE69A /* Main.storyboard */; };
+		24D35FE61E06B14B0085696F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D35FE51E06B14B0085696F /* Carbon.framework */; };
+		24D35FE91E06B1F30085696F /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D35FE81E06B1F30085696F /* LoginManager.m */; };
+		CA08140B5275A5012B5217C5 /* libPods-NJULoginMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 697A8E8F40AAE6876B6122E0 /* libPods-NJULoginMac.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		240E1C7D1E06A8CC006AE69A /* NJULoginMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJULoginMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		240E1C801E06A8CC006AE69A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		240E1C811E06A8CC006AE69A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		240E1C841E06A8CC006AE69A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		240E1C861E06A8CC006AE69A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		240E1C871E06A8CC006AE69A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		240E1C891E06A8CC006AE69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		240E1C8C1E06A8CC006AE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		240E1C8E1E06A8CC006AE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D35FE51E06B14B0085696F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		24D35FE71E06B1F30085696F /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		24D35FE81E06B1F30085696F /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		68E5038E086FF676B40BAAF3 /* Pods-NJULoginMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJULoginMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-NJULoginMac/Pods-NJULoginMac.release.xcconfig"; sourceTree = "<group>"; };
+		697A8E8F40AAE6876B6122E0 /* libPods-NJULoginMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NJULoginMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBA21980C5AB23DCCD3D6EC /* Pods-NJULoginMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NJULoginMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NJULoginMac/Pods-NJULoginMac.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		240E1C7A1E06A8CC006AE69A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D35FE61E06B14B0085696F /* Carbon.framework in Frameworks */,
+				CA08140B5275A5012B5217C5 /* libPods-NJULoginMac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BE293B2718154317D0BEEDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEBA21980C5AB23DCCD3D6EC /* Pods-NJULoginMac.debug.xcconfig */,
+				68E5038E086FF676B40BAAF3 /* Pods-NJULoginMac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		240E1C741E06A8CC006AE69A = {
+			isa = PBXGroup;
+			children = (
+				240E1C7F1E06A8CC006AE69A /* NJULoginMac */,
+				240E1C7E1E06A8CC006AE69A /* Products */,
+				0BE293B2718154317D0BEEDD /* Pods */,
+				6956DB58FEAC4820BF811116 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		240E1C7E1E06A8CC006AE69A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				240E1C7D1E06A8CC006AE69A /* NJULoginMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		240E1C7F1E06A8CC006AE69A /* NJULoginMac */ = {
+			isa = PBXGroup;
+			children = (
+				240E1C801E06A8CC006AE69A /* AppDelegate.h */,
+				240E1C811E06A8CC006AE69A /* AppDelegate.m */,
+				240E1C861E06A8CC006AE69A /* ViewController.h */,
+				240E1C871E06A8CC006AE69A /* ViewController.m */,
+				240E1C891E06A8CC006AE69A /* Assets.xcassets */,
+				240E1C8B1E06A8CC006AE69A /* Main.storyboard */,
+				240E1C8E1E06A8CC006AE69A /* Info.plist */,
+				240E1C831E06A8CC006AE69A /* Supporting Files */,
+				24D35FE71E06B1F30085696F /* LoginManager.h */,
+				24D35FE81E06B1F30085696F /* LoginManager.m */,
+			);
+			path = NJULoginMac;
+			sourceTree = "<group>";
+		};
+		240E1C831E06A8CC006AE69A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				240E1C841E06A8CC006AE69A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6956DB58FEAC4820BF811116 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24D35FE51E06B14B0085696F /* Carbon.framework */,
+				697A8E8F40AAE6876B6122E0 /* libPods-NJULoginMac.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		240E1C7C1E06A8CC006AE69A /* NJULoginMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 240E1C911E06A8CC006AE69A /* Build configuration list for PBXNativeTarget "NJULoginMac" */;
+			buildPhases = (
+				10D5D30C6785FDA71022EB3A /* [CP] Check Pods Manifest.lock */,
+				240E1C791E06A8CC006AE69A /* Sources */,
+				240E1C7A1E06A8CC006AE69A /* Frameworks */,
+				240E1C7B1E06A8CC006AE69A /* Resources */,
+				A157A4C35870ABA62A690733 /* [CP] Embed Pods Frameworks */,
+				35A3FFEC0A8E09125030884D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NJULoginMac;
+			productName = NJULoginMac;
+			productReference = 240E1C7D1E06A8CC006AE69A /* NJULoginMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		240E1C751E06A8CC006AE69A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "宋 奎熹";
+				TargetAttributes = {
+					240E1C7C1E06A8CC006AE69A = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = VEBQ28K9EA;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 240E1C781E06A8CC006AE69A /* Build configuration list for PBXProject "NJULoginMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 240E1C741E06A8CC006AE69A;
+			productRefGroup = 240E1C7E1E06A8CC006AE69A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				240E1C7C1E06A8CC006AE69A /* NJULoginMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		240E1C7B1E06A8CC006AE69A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240E1C8A1E06A8CC006AE69A /* Assets.xcassets in Resources */,
+				240E1C8D1E06A8CC006AE69A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10D5D30C6785FDA71022EB3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35A3FFEC0A8E09125030884D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NJULoginMac/Pods-NJULoginMac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A157A4C35870ABA62A690733 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NJULoginMac/Pods-NJULoginMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		240E1C791E06A8CC006AE69A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240E1C881E06A8CC006AE69A /* ViewController.m in Sources */,
+				24D35FE91E06B1F30085696F /* LoginManager.m in Sources */,
+				240E1C851E06A8CC006AE69A /* main.m in Sources */,
+				240E1C821E06A8CC006AE69A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		240E1C8B1E06A8CC006AE69A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				240E1C8C1E06A8CC006AE69A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		240E1C8F1E06A8CC006AE69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		240E1C901E06A8CC006AE69A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		240E1C921E06A8CC006AE69A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEBA21980C5AB23DCCD3D6EC /* Pods-NJULoginMac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VEBQ28K9EA;
+				INFOPLIST_FILE = NJULoginMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = krayc.NJULoginMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		240E1C931E06A8CC006AE69A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E5038E086FF676B40BAAF3 /* Pods-NJULoginMac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VEBQ28K9EA;
+				INFOPLIST_FILE = NJULoginMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = krayc.NJULoginMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		240E1C781E06A8CC006AE69A /* Build configuration list for PBXProject "NJULoginMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240E1C8F1E06A8CC006AE69A /* Debug */,
+				240E1C901E06A8CC006AE69A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		240E1C911E06A8CC006AE69A /* Build configuration list for PBXNativeTarget "NJULoginMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240E1C921E06A8CC006AE69A /* Debug */,
+				240E1C931E06A8CC006AE69A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 240E1C751E06A8CC006AE69A /* Project object */;
+}
