@@ -54,6 +54,11 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
     
+    self.mainWindow = [[[NSApplication sharedApplication] windows] objectAtIndex:0];
+    
+    [[self.mainWindow standardWindowButton:NSWindowZoomButton] setHidden:YES];
+    [[self.mainWindow standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
+    
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [_statusItem setImage:[NSImage imageNamed:@"TEMP_STATUS_BAR.png"]];
     [_statusItem setHighlightMode:YES];
@@ -86,7 +91,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 }
 
 - (void)onStatusItemClicked:(id)sender{
-    NSLog(@"click");
+    [self.mainWindow makeKeyAndOrderFront:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification{
