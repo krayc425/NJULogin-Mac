@@ -17,20 +17,13 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="NJULoginMac" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About NJULoginMac" id="5kV-Vb-QxS">
+                                        <menuItem title="About NJULoginMac" state="on" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
-                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Services" id="NMo-om-nkz">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide NJULoginMac" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
@@ -51,19 +44,7 @@
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
                                         <menuItem title="Quit NJULoginMac" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
-                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
-                            <menuItem title="Help" id="wpr-3q-Mcd">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
-                                    <items>
-                                        <menuItem title="NJULoginMac Help" keyEquivalent="?" id="FKE-Sm-Kum">
-                                            <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                                <action selector="terminate:" target="hnw-xV-0zn" id="2OT-Bx-div"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -84,8 +65,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="NJU Login" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="NJULogin for Mac By KrayC" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -217,7 +198,7 @@
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gMd-OG-qRC">
-                                <rect key="frame" x="380" y="13" width="66" height="32"/>
+                                <rect key="frame" x="369" y="13" width="77" height="32"/>
                                 <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qPO-fw-3EU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -226,6 +207,14 @@
                                     <action selector="quitAction:" target="XfG-lQ-9wD" id="fDh-Ys-E0g"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivc-dR-eUg">
+                                <rect key="frame" x="38" y="22" width="299" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="快捷键 登录 : Option + P 登出 : Shift + Option + P" id="KQg-EE-LPN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="6PU-iF-1vA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="3aY-Ba-fQb"/>
@@ -233,8 +222,11 @@
                             <constraint firstItem="R1Y-Ta-Vcy" firstAttribute="centerY" secondItem="6PU-iF-1vA" secondAttribute="centerY" id="HQV-0F-gEE"/>
                             <constraint firstAttribute="trailing" secondItem="6PU-iF-1vA" secondAttribute="trailing" constant="130" id="J1g-01-Aa3"/>
                             <constraint firstItem="PwW-kZ-bXO" firstAttribute="top" secondItem="6PU-iF-1vA" secondAttribute="bottom" constant="20" id="Kqi-9A-S3U"/>
+                            <constraint firstItem="gMd-OG-qRC" firstAttribute="centerY" secondItem="ivc-dR-eUg" secondAttribute="centerY" id="ZCM-rv-yr8"/>
                             <constraint firstItem="PwW-kZ-bXO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="40" id="iMi-T2-ouK"/>
+                            <constraint firstItem="gMd-OG-qRC" firstAttribute="leading" secondItem="ivc-dR-eUg" secondAttribute="trailing" constant="40" id="ngn-k3-Vs0"/>
                             <constraint firstAttribute="trailing" secondItem="R1Y-Ta-Vcy" secondAttribute="trailing" constant="40" id="oSd-fe-o3N"/>
+                            <constraint firstItem="ivc-dR-eUg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="40" id="ot7-g2-ecg"/>
                             <constraint firstItem="gMd-OG-qRC" firstAttribute="top" secondItem="PwW-kZ-bXO" secondAttribute="bottom" constant="20" id="pLo-Ya-p8x"/>
                             <constraint firstAttribute="trailing" secondItem="gMd-OG-qRC" secondAttribute="trailing" constant="40" id="pPO-DM-XOJ"/>
                             <constraint firstAttribute="trailing" secondItem="PwW-kZ-bXO" secondAttribute="trailing" constant="40" id="xBg-dT-sNJ"/>
