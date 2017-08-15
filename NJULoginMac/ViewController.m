@@ -115,7 +115,6 @@
 }
 
 - (void)logout{
-    
     NSLog(@"%@", [[LoginManager logout] description]);
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

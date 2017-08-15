@@ -9,12 +9,31 @@
 #import "AppDelegate.h"
 #import "Carbon/Carbon.h"
 #import "LoginManager.h"
+#import "TouchBar.h"
+#import <ServiceManagement/ServiceManagement.h>
+#import "TouchButton.h"
+#import "TouchDelegate.h"
+#import <Cocoa/Cocoa.h>
+#import "ViewController.h"
 
-@interface AppDelegate ()
+static const NSTouchBarItemIdentifier muteIdentifier = @"pp.mute";
+static NSString *const MASCustomShortcutKey = @"customShortcut";
+
+@interface AppDelegate () <TouchDelegate>
 
 @end
 
 @implementation AppDelegate
+
+NSButton *touchBarButton;
+
+@synthesize statusBar;
+
+TouchButton *button;
+
+NSString *STATUS_ICON_BLACK = @"tray-unactive-black";
+NSString *STATUS_ICON_RED = @"tray-active";
+NSString *STATUS_ICON_WHITE = @"tray-unactive-white";
 
 //用于保存快捷键事件回调的引用，以便于可以注销
 static EventHandlerRef g_EventHandlerRef = NULL;
@@ -54,7 +73,6 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification{
-    
     self.mainWindow = [[[NSApplication sharedApplication] windows] objectAtIndex:0];
     
     [[self.mainWindow standardWindowButton:NSWindowZoomButton] setHidden:YES];
@@ -89,6 +107,37 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
                         GetApplicationEventTarget(),
                         0,
                         &b_HotKeyRef);
+    
+    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
+    NSImage* statusImage = [self getStatusBarImage];
+    
+    statusImage.size = NSMakeSize(18, 18);
+    
+    // allows cocoa to change the background of the icon
+    [statusImage setTemplate:YES];
+    
+    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+    self.statusBar.image = statusImage;
+    self.statusBar.highlightMode = YES;
+    self.statusBar.enabled = YES;
+    self.statusBar.menu = self.statusMenu;
+    
+    // 注册 TouchBar
+    DFRSystemModalShowsCloseBoxWhenFrontMost(YES);
+    
+    NSCustomTouchBarItem *mute = [[NSCustomTouchBarItem alloc] initWithIdentifier:muteIdentifier];
+    
+    NSImage *muteImage = [NSImage imageNamed:NSImageNameTouchBarGoUpTemplate];
+    button = [TouchButton buttonWithImage:muteImage target:nil action:nil];
+    [button setBezelColor:NSColor.clearColor];
+    [button setDelegate: self];
+    mute.view = button;
+    
+    touchBarButton = button;
+    
+    [NSTouchBarItem addSystemTrayItem:mute];
+    DFRElementSetControlStripPresenceForIdentifier(muteIdentifier, YES);
 }
 
 - (void)onStatusItemClicked:(id)sender{
@@ -112,6 +161,21 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
     }
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] removeAllDeliveredNotifications];
+}
+
+- (NSImage *)getStatusBarImage {
+    NSImage* statusImage = [NSImage imageNamed:STATUS_ICON_BLACK];
+    return statusImage;
+}
+
+- (void)onPressed:(TouchButton*)sender{
+    NSLog(@"Pressed");
+}
+
+- (void)onLongPressed:(TouchButton*)sender {
+    NSLog(@"Long Pressed");
+    [[[[NSApplication sharedApplication] windows] lastObject] makeKeyAndOrderFront:nil];
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:true];
 }
 
 @end
