@@ -61,7 +61,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
     [[self.mainWindow standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
     
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    [_statusItem setImage:[NSImage imageNamed:@"TEMP_STATUS_BAR.png"]];
+    [_statusItem setImage:[NSImage imageNamed:@"Status_Bar"]];
     [_statusItem setHighlightMode:YES];
     [_statusItem setAction:@selector(onStatusItemClicked:)];
     [_statusItem setTarget:self];

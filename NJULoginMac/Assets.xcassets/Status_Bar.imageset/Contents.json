@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "TEMP_STATUS_BAR.png",
+      "filename" : "Status_Bar.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Status_Bar@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Status_Bar@3x.png",
       "scale" : "3x"
     }
   ],
