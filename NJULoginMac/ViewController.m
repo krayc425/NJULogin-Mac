@@ -10,10 +10,6 @@
 #import "AFNetworking.h"
 #import "LoginManager.h"
 
-#define LOGIN_URL @"http://p.nju.edu.cn/portal_io/login"
-#define LOGOUT_URL @"http://p.nju.edu.cn/portal_io/logout"
-#define CHECK_STATUS_URL @"http://p.nju.edu.cn/portal_io/getinfo"
-
 @implementation ViewController
 
 - (void)viewDidLoad {

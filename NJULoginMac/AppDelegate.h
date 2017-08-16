@@ -13,10 +13,7 @@
 @property (nonatomic, nonnull) NSWindow *mainWindow;
 @property (nonatomic, nonnull) NSStatusItem *statusItem;
 
-@property (weak, nullable) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic, nonnull) NSStatusItem *statusBar;
-
-@property (weak, nullable) IBOutlet NSMenuItem *muteMenuItem;
 
 @end
 

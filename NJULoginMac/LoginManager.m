@@ -9,13 +9,11 @@
 #import "LoginManager.h"
 #import "AFNetworking.h"
 
-#define LOGIN_URL @"http://p.nju.edu.cn/portal_io/login"
-#define LOGOUT_URL @"http://p.nju.edu.cn/portal_io/logout"
-#define CHECK_STATUS_URL @"http://p.nju.edu.cn/portal_io/getinfo"
-
 @implementation LoginManager
 
 + (NSDictionary *)logout{
+    
+    NSLog(@"Logout");
     
     __block NSDictionary *dict;
     
@@ -48,6 +46,9 @@
 }
 
 + (NSDictionary *)loginWithUserName:(NSString *)username andPassword:(NSString *)password{
+    
+    NSLog(@"Login with username %@ and password %@", username, password);
+    
     NSDictionary *tmpDict = @{
                               @"username" : [NSString stringWithString:username],
                               @"password" : [NSString stringWithString:password],

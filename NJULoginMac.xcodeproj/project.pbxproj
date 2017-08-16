@@ -30,6 +30,7 @@
 		240E1C891E06A8CC006AE69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		240E1C8C1E06A8CC006AE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		240E1C8E1E06A8CC006AE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		241737441F43FD58003D4DA6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2489B2CA1F435464004B697B /* TouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchButton.m; path = "../../../iOS/mute-me/Mute Me Now/TouchButton.m"; sourceTree = "<group>"; };
 		2489B2CB1F435465004B697B /* TouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchButton.h; path = "../../../iOS/mute-me/Mute Me Now/TouchButton.h"; sourceTree = "<group>"; };
 		2489B2CC1F435466004B697B /* TouchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchDelegate.h; path = "../../../iOS/mute-me/Mute Me Now/TouchDelegate.h"; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 				2489B2CA1F435464004B697B /* TouchButton.m */,
 				2489B2CC1F435466004B697B /* TouchDelegate.h */,
 				240E1C8B1E06A8CC006AE69A /* Main.storyboard */,
+				241737441F43FD58003D4DA6 /* PrefixHeader.pch */,
 				240E1C8E1E06A8CC006AE69A /* Info.plist */,
 				240E1C831E06A8CC006AE69A /* Supporting Files */,
 			);
@@ -368,6 +370,8 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NJULoginMac/PrefixHeader.pch";
 				INFOPLIST_FILE = NJULoginMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -387,6 +391,8 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NJULoginMac/PrefixHeader.pch";
 				INFOPLIST_FILE = NJULoginMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
