@@ -14,10 +14,8 @@
 #import "TouchButton.h"
 #import "TouchDelegate.h"
 #import <Cocoa/Cocoa.h>
-#import "ViewController.h"
 
-static const NSTouchBarItemIdentifier muteIdentifier = @"krayc.njulogin";
-static NSString *const MASCustomShortcutKey = @"customShortcut";
+static const NSTouchBarItemIdentifier njuTouchBarIdentifier = @"krayc.njulogin";
 
 @interface AppDelegate () <TouchDelegate>
 
@@ -121,19 +119,18 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
     self.statusBar.enabled = YES;
     
     DFRSystemModalShowsCloseBoxWhenFrontMost(YES);
-    
-    NSCustomTouchBarItem *njuTouchBarItem = [[NSCustomTouchBarItem alloc] initWithIdentifier:muteIdentifier];
+    NSCustomTouchBarItem *njuTouchBarItem = [[NSCustomTouchBarItem alloc] initWithIdentifier:njuTouchBarIdentifier];
     
     NSImage *njuImage = [NSImage imageNamed:@"P"];
     button = [TouchButton buttonWithImage:njuImage target:nil action:nil];
     [button setBezelColor:NJU_COLOR];
-    [button setDelegate: self];
+    [button setDelegate:self];
     njuTouchBarItem.view = button;
     
     touchBarButton = button;
     
     [NSTouchBarItem addSystemTrayItem:njuTouchBarItem];
-    DFRElementSetControlStripPresenceForIdentifier(muteIdentifier, YES);
+    DFRElementSetControlStripPresenceForIdentifier(njuTouchBarIdentifier, YES);
 }
 
 - (void)onStatusItemClicked:(id)sender{
@@ -167,8 +164,6 @@ OSStatus myHotKeyHandler(EventHandlerCallRef inHandlerCallRef, EventRef inEvent,
 
 - (void)onLongPressed:(TouchButton*)sender {
     NSLog(@"Long Pressed");
-    [[[[NSApplication sharedApplication] windows] lastObject] makeKeyAndOrderFront:nil];
-    [[NSApplication sharedApplication] activateIgnoringOtherApps:true];
     [LoginManager logout];
 }
 
