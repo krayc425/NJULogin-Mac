@@ -10,10 +10,10 @@
 
 @interface ViewController : NSViewController
 
-@property (nonnull, nonatomic) IBOutlet NSTextField *usernameText;
-@property (nonnull, nonatomic) IBOutlet NSTextField *passwordText;
-@property (nonnull, nonatomic) IBOutlet NSButton *actionButton;
-@property (nonnull, nonatomic) IBOutlet NSTextView *logView;
+@property (weak, nonatomic) IBOutlet NSTextField *usernameText;
+@property (weak, nonatomic) IBOutlet NSTextField *passwordText;
+@property (weak, nonatomic) IBOutlet NSButton *actionButton;
+@property (weak, nonatomic) IBOutlet NSTextView *logView;
 
 @end
 

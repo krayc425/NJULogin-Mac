@@ -12,7 +12,7 @@
 		240E1C881E06A8CC006AE69A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240E1C871E06A8CC006AE69A /* ViewController.m */; };
 		240E1C8A1E06A8CC006AE69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240E1C891E06A8CC006AE69A /* Assets.xcassets */; };
 		240E1C8D1E06A8CC006AE69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240E1C8B1E06A8CC006AE69A /* Main.storyboard */; };
-		2489B2CE1F435467004B697B /* TouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2489B2CA1F435464004B697B /* TouchButton.m */; };
+		2446E0FD1FC4348C005A6D16 /* TouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446E0FC1FC4348C005A6D16 /* TouchButton.m */; };
 		2489B2D01F43572F004B697B /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2489B2CF1F43571B004B697B /* ServiceManagement.framework */; };
 		2489B2D21F435911004B697B /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2489B2D11F435911004B697B /* DFRFoundation.framework */; };
 		24D35FE61E06B14B0085696F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D35FE51E06B14B0085696F /* Carbon.framework */; };
@@ -31,10 +31,10 @@
 		240E1C8C1E06A8CC006AE69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		240E1C8E1E06A8CC006AE69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		241737441F43FD58003D4DA6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		2489B2CA1F435464004B697B /* TouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchButton.m; path = "../../../iOS/mute-me/Mute Me Now/TouchButton.m"; sourceTree = "<group>"; };
-		2489B2CB1F435465004B697B /* TouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchButton.h; path = "../../../iOS/mute-me/Mute Me Now/TouchButton.h"; sourceTree = "<group>"; };
-		2489B2CC1F435466004B697B /* TouchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchDelegate.h; path = "../../../iOS/mute-me/Mute Me Now/TouchDelegate.h"; sourceTree = "<group>"; };
-		2489B2CD1F435466004B697B /* TouchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchBar.h; path = "../../../iOS/mute-me/Mute Me Now/TouchBar.h"; sourceTree = "<group>"; };
+		2446E0F91FC4348B005A6D16 /* TouchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchBar.h; sourceTree = "<group>"; };
+		2446E0FA1FC4348C005A6D16 /* TouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchButton.h; sourceTree = "<group>"; };
+		2446E0FB1FC4348C005A6D16 /* TouchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDelegate.h; sourceTree = "<group>"; };
+		2446E0FC1FC4348C005A6D16 /* TouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchButton.m; sourceTree = "<group>"; };
 		2489B2CF1F43571B004B697B /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		2489B2D11F435911004B697B /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		24D35FE51E06B14B0085696F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
@@ -97,10 +97,10 @@
 				240E1C861E06A8CC006AE69A /* ViewController.h */,
 				240E1C871E06A8CC006AE69A /* ViewController.m */,
 				240E1C891E06A8CC006AE69A /* Assets.xcassets */,
-				2489B2CD1F435466004B697B /* TouchBar.h */,
-				2489B2CB1F435465004B697B /* TouchButton.h */,
-				2489B2CA1F435464004B697B /* TouchButton.m */,
-				2489B2CC1F435466004B697B /* TouchDelegate.h */,
+				2446E0FC1FC4348C005A6D16 /* TouchButton.m */,
+				2446E0F91FC4348B005A6D16 /* TouchBar.h */,
+				2446E0FA1FC4348C005A6D16 /* TouchButton.h */,
+				2446E0FB1FC4348C005A6D16 /* TouchDelegate.h */,
 				240E1C8B1E06A8CC006AE69A /* Main.storyboard */,
 				241737441F43FD58003D4DA6 /* PrefixHeader.pch */,
 				240E1C8E1E06A8CC006AE69A /* Info.plist */,
@@ -252,7 +252,7 @@
 			files = (
 				240E1C881E06A8CC006AE69A /* ViewController.m in Sources */,
 				24D35FE91E06B1F30085696F /* LoginManager.m in Sources */,
-				2489B2CE1F435467004B697B /* TouchButton.m in Sources */,
+				2446E0FD1FC4348C005A6D16 /* TouchButton.m in Sources */,
 				240E1C851E06A8CC006AE69A /* main.m in Sources */,
 				240E1C821E06A8CC006AE69A /* AppDelegate.m in Sources */,
 			);
