@@ -2,17 +2,39 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Status_Bar.png",
+      "filename" : "Status_Bar_Dark.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Status_Bar@2x.png",
+      "filename" : "Status_Bar-1.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Status_Bar_Dark@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Status_Bar@3x.png",
+      "filename" : "Status_Bar@2x-1.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Status_Bar_Dark@3x.png",
       "scale" : "3x"
     }
   ],
